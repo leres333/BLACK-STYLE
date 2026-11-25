@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BLACK STYLE— Barbershop</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ШАПКА САЙТА -->
+    <header class="header">
+
+        <div class="logo">
+            BLACK <span>STYLE</span>
+        </div>
+
+        <nav class="navigation"><button class="menu-toggle" id="menuToggle">
+    ☰
+</button>
+            <a href="#home">Главная</a>
+            <a href="#services">Услуги</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#about">О нас</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+
+        <a href="#contacts" class="header-button">
+            Записаться
+        </a>
+
+    </header>
+
+
+    <!-- ГЛАВНЫЙ ЭКРАН -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="subtitle">
+                    PREMIUM BARBERSHOP
+                </p>
+
+                <h1>
+                    ТВОЙ СТИЛЬ
+                    <span>ТВОИ ПРАВИЛА.</span>
+                </h1>
+
+                <p class="description">
+                    Мужские стрижки, безупречный стиль
+                    и профессиональный подход.
+                </p>
+
+                <a href="#contacts" class="main-button">
+                    ЗАПИСАТЬСЯ НА СТРИЖКУ
+                </a>
+
+            </div>
+
+        </section>
+
+    </main> <!-- РАЗДЕЛ УСЛУГ -->
+
+<section class="services" id="services">
+
+    <div class="section-title">
+        <p>ЧТО МЫ ПРЕДЛАГАЕМ</p>
+        <h2>НАШИ УСЛУГИ</h2>
+    </div>
+
+    <div class="services-container">
+
+        <div class="service-card">
+            <h3>Мужская стрижка</h3>
+            <p>Профессиональная стрижка с учетом твоего стиля.</p>
+            <span>от 1500 ₽</span>
+        </div>
+
+        <div class="service-card">
+            <h3>Моделирование бороды</h3>
+            <p>Аккуратная форма и профессиональный уход.</p>
+            <span>от 1000 ₽</span>
+        </div>
+
+        <div class="service-card">
+            <h3>Стрижка + борода</h3>
+            <p>Комплексный уход и создание образа.</p>
+            <span>от 2200 ₽</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- РАЗДЕЛ ГАЛЕРЕИ -->
+
+<section class="gallery" id="gallery">
+
+    <div class="section-title">
+        <p>НАШИ РАБОТЫ</p>
+        <h2>ГАЛЕРЕЯ</h2>
+    </div>
+
+    <div class="gallery-container">
+
+        <img src="images/haircut1.jpg" alt="Мужская стрижка">
+        <img src="images/haircut2.jpg" alt="Современная мужская стрижка">
+        <img src="images/haircut3.jpg" alt="Моделирование бороды">
+
+    </div>
+
+</section>
+
+
+<!-- РАЗДЕЛ О НАС -->
+
+<section class="about" id="about">
+
+    <div class="section-title">
+        <p>BLACK STYLE</p>
+        <h2>БОЛЬШЕ ЧЕМ СТРИЖКА</h2>
+    </div>
+
+    <p>
+        BLACK STYLE — пространство мужского стиля,
+        профессионального подхода и внимания к деталям.
+        Мы помогаем каждому клиенту создать свой образ.
+    </p>
+
+</section>
+
+
+<!-- РАЗДЕЛ КОНТАКТОВ -->
+
+<section class="contacts" id="contacts">
+
+    <div class="section-title">
+        <p>МЫ ЖДЁМ ТЕБЯ</p>
+        <h2>КОНТАКТЫ</h2>
+    </div>
+
+    <p>Телефон: +7 (978) 455 62 31</p>
+    <p>Адрес: улица Залесская 14</p>
+    <p>График: Ежедневно, 10:00–21:00</p>
+
+</section> <!-- ФОРМА ЗАПИСИ -->
+
+<section class="booking" id="booking">
+
+    <div class="section-title">
+
+        <p>ТВОЙ НОВЫЙ ОБРАЗ</p>
+
+        <h2>ЗАПИСАТЬСЯ</h2>
+
+    </div>
+
+    <form id="bookingForm">
+
+        <input
+            type="text"
+            id="clientName"
+            placeholder="Твоё имя"
+            required
+        >
+
+        <input
+            type="tel"
+            id="clientPhone"
+            placeholder="Номер телефона"
+            required
+        >
+
+        <select id="serviceSelect" required>
+
+            <option value="">Выбери услугу</option>
+
+            <option value="Стрижка">
+                Мужская стрижка
+            </option>
+
+            <option value="Борода">
+                Моделирование бороды
+            </option>
+
+            <option value="Комплекс">
+                Стрижка + борода
+            </option>
+
+        </select>
+
+        <button type="submit">
+            ОТПРАВИТЬ ЗАЯВКУ
+        </button>
+
+        <p id="formMessage"></p>
+
+    </form>
+
+</section>
+
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+
+        <p>© 2026 BLACK STYLE. Все права защищены.</p>
+
+    </footer>
+
+</body> <script src="js/script.js"></script>
+</html>

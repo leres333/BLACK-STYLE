@@ -1,0 +1,630 @@
+/* ОСНОВНЫЕ НАСТРОЙКИ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #080808;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+
+/* ШАПКА САЙТА */
+
+.header {
+    width: 100%;
+    padding: 25px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #080808;
+    border-bottom: 1px solid #292929;
+}
+
+
+/* ЛОГОТИП */
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #c9a45c;
+}
+
+
+/* НАВИГАЦИЯ */
+
+.navigation {
+    display: flex;
+    gap: 30px;
+}
+
+.navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    color: #c9a45c;
+}
+
+
+/* КНОПКА В ШАПКЕ */
+
+.header-button {
+    padding: 12px 22px;
+
+    background-color: #c9a45c;
+    color: #080808;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.header-button:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+
+/* ГЛАВНЫЙ ЭКРАН */
+
+.hero {
+    min-height: 85vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.72),
+            rgba(0, 0, 0, 0.85)
+        ),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ТЕКСТ ГЛАВНОГО ЭКРАНА */
+
+.hero-content {
+    max-width: 750px;
+}
+
+.subtitle {
+    color: #c9a45c;
+    letter-spacing: 5px;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 75px);
+    line-height: 1.15;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #c9a45c;
+}
+
+.description {
+    color: #cccccc;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+
+/* ГЛАВНАЯ КНОПКА */
+
+.main-button {
+    display: inline-block;
+
+    padding: 17px 30px;
+
+    background-color: #c9a45c;
+    color: #080808;
+
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background-color: #ffffff;
+    transform: translateY(-4px);
+}
+
+
+/* ПОДВАЛ */
+
+.footer {
+    padding: 25px;
+    text-align: center;
+
+    background-color: #080808;
+    border-top: 1px solid #292929;
+
+    color: #777777;
+    font-size: 13px;
+}
+
+
+/* АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ */
+
+@media (max-width: 768px) 
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px 5%;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding: 60px 6%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+/* ОБЩИЕ ЗАГОЛОВКИ РАЗДЕЛОВ */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: #c9a45c;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    color: #ffffff;
+}
+
+
+/* РАЗДЕЛ УСЛУГ */
+
+.services {
+    padding: 100px 8%;
+    background-color: #101010;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    padding: 40px 30px;
+    background-color: #191919;
+    border: 1px solid #333333;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: #c9a45c;
+}
+
+.service-card h3 {
+    color: #c9a45c;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.service-card p {
+    color: #aaaaaa;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.service-card span {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* ГАЛЕРЕЯ */
+
+.gallery {
+    padding: 100px 8%;
+    background-color: #080808;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border: 1px solid #333333;
+    transition: 0.3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.03);
+    border-color: #c9a45c;
+}
+
+
+/* О НАС */
+
+.about {
+    padding: 100px 15%;
+    text-align: center;
+    background-color: #101010;
+}
+
+.about > p {
+    color: #bbbbbb;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+
+/* КОНТАКТЫ */
+
+.contacts {
+    padding: 100px 8%;
+    text-align: center;
+    background-color: #080808;
+}
+
+.contacts > p {
+    color: #cccccc;
+    margin: 15px 0;
+}
+
+
+/* АДАПТАЦИЯ */
+
+@media (max-width: 768px) {
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .gallery-container img {
+        height: 280px;
+    }
+
+    .services,
+    .gallery,
+    .about,
+    .contacts {
+        padding: 65px 6%;
+    }
+
+} /* КНОПКА МОБИЛЬНОГО МЕНЮ */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #c9a45c;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* НАСТРОЙКИ ТЕЛЕФОНОВ */
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        background-color: #151515;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+}/* ФОРМА ЗАПИСИ */
+
+.booking {
+    padding: 100px 8%;
+    background-color: #101010;
+}
+
+#bookingForm {
+    max-width: 500px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#bookingForm input,
+#bookingForm select {
+    padding: 17px;
+    background-color: #191919;
+    border: 1px solid #444444;
+
+    color: white;
+    font-size: 15px;
+}
+
+#bookingForm input:focus,
+#bookingForm select:focus {
+    outline: none;
+    border-color: #c9a45c;
+}
+
+#bookingForm button {
+    padding: 17px;
+    background-color: #c9a45c;
+    border: none;
+
+    color: #080808;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#bookingForm button:hover {
+    background-color: white;
+}
+
+#formMessage {
+    color: #c9a45c;
+    text-align: center;
+}/* ПЛАНШЕТЫ */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 20px 4%;
+    }
+
+    .navigation {
+        gap: 15px;
+    }
+
+    .navigation a {
+        font-size: 13px;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ТЕЛЕФОНЫ */
+
+@media (max-width: 600px) {
+
+    /* ШАПКА */
+
+    .header {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .header-button {
+        padding: 10px 18px;
+        font-size: 13px;
+    }
+
+
+    /* ГЛАВНЫЙ ЭКРАН */
+
+    .hero {
+        min-height: 70vh;
+        padding: 50px 20px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .main-button {
+        padding: 15px 20px;
+        font-size: 12px;
+    }
+
+
+    /* УСЛУГИ */
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 30px 22px;
+    }
+
+
+    /* ГАЛЕРЕЯ */
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-container img {
+        height: 300px;
+    }
+
+
+    /* ЗАГОЛОВКИ */
+
+    .section-title h2 {
+        font-size: 25px;
+    }
+
+
+    /* РАЗДЕЛЫ */
+
+    .services,
+    .gallery,
+    .about,
+    .contacts,
+    .booking {
+        padding: 60px 20px;
+    }
+
+    .about > p {
+        font-size: 15px;
+    }
+
+}
+
+
+/* ЗАПРЕЩАЕМ ГОРИЗОНТАЛЬНУЮ ПРОКРУТКУ */
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}/* АНИМАЦИЯ ПОЯВЛЕНИЯ */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.hero-content {
+    animation: fadeIn 1s ease;
+}
+
+
+/* ПЛАВНОЕ ПОЯВЛЕНИЕ КАРТОЧЕК */
+
+.service-card {
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #c9a45c;
+}
+
+
+/* ПЛАВНОЕ УВЕЛИЧЕНИЕ ФОТО */
+
+.gallery-container img {
+    transition: transform 0.4s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.03);
+}
+
+
+/* УВАЖАЕМ НАСТРОЙКИ АНИМАЦИИ УСТРОЙСТВА */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}button:active,
+.main-button:active,
+.header-button:active {
+    transform: scale(0.97);
+}
